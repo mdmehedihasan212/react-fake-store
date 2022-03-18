@@ -13,11 +13,11 @@ const Main = () => {
     console.log(products);
     return (
         <div>
-            <h1>All Products</h1>
-
-            {
-                products.map(product => <Product product={product}></Product>)
-            }
+            <div className="row">
+                {
+                    products.map(product => <Product key={product.id} product={product}></Product>)
+                }
+            </div>
         </div>
     );
 };
