@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
 import './Header.css'
 
 const Header = () => {
-    const [count, setCount] = useState(0);
-
-    // const plus = () => {
-    //     setCount(count + 1)
-    // }
-    // const minus = () => {
-    //     setCount(count - 1)
-    // }
-    // console.log(count);
-
     return (
-        <div className='card'>
-            <h1>Counter</h1>
-            <h3>{count}</h3>
-            <button onClick={() => setCount(count + 1)} className='p-3 m-2'>+</button>
-            <button onClick={() => setCount(count - 1)} className='p-3 m-2'>-</button>
+        <div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-2">Logo</div>
+                    <div className="col-md-10 header-container d-flex justify-content-end">
+                        <li className='item me-4 p-2'>Home</li>
+                        <li className='item me-4 p-2'>Contact</li>
+                        <li className='item me-4 p-2'>Cart</li>
+                        <li className='item me-4 p-2'>Login</li>
+                        <li className='item me-4 p-2'>Singin</li>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
