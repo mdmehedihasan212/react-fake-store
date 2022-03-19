@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
 const ProductModal = ({ product }) => {
-    const { title, price, image, description, category, rating } = product;
+    const { title, price, image, description } = product;
     console.log(product);
     const [show, setShow] = useState(false);
 
@@ -17,11 +17,9 @@ const ProductModal = ({ product }) => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>{title}</Modal.Title>
-                    <img className='w-25 auto' src={image} alt="" />
+                    <img className='w-50 auto' src={image} alt="" />
                 </Modal.Header>
-                <Modal.Body className='fw-bolder'>${price}</Modal.Body>
-                <Modal.Body className='fw-bolder'>{category}</Modal.Body>
-                <Modal.Body className='fw-bolder'>{rating.rate} {rating.count}</Modal.Body>
+                <Modal.Body className='fw-bolder'>Price: ${price}</Modal.Body>
                 <Modal.Body>{description}</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>

@@ -1,0 +1,16 @@
+.card{
+    margin:20px 30px;
+    padding: 20px;
+    width:380px;
+    height:400px;
+    position:relative;
+    border-radius:10px;
+    background-color:#FFF;
+    box-shadow: 0 19px 48px rgba(0,0,0,0.30), 0 15px 32px rgba(0,0,0,0.22);
+}
+.card img{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+    
