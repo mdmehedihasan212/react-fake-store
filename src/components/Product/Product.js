@@ -1,7 +1,7 @@
 import React from 'react';
 import './Product.css'
 
-const Product = ({ product }) => {
+const Product = ({ product, setCountCard }) => {
     console.log(product);
     return (
         <div className='col-md-4 container'>
@@ -9,9 +9,9 @@ const Product = ({ product }) => {
                 <h1>{product.title.slice(0, 10)}</h1>
                 <img className='w-50 m-auto' src={product.image} alt="" />
                 <div className="d-flex justify-content-evenly">
-                    <button className='btn btn-success'>Add Cart</button>
+                    <button onClick={setCountCard} className='btn btn-success'>Add To Cart</button>
                     <button className='btn btn-danger'>Delete</button>
-                    <button className='btn btn-warning'>Details</button>
+                    <button className='btn btn-info'>Details</button>
                 </div>
             </div>
         </div>
